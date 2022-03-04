@@ -1,23 +1,30 @@
 import React, {useState} from "react";
-import "./SearchForm.css"
-import roll from "./images/roll.jpeg"
+import "./SearchForm.css";
+import roll from "./images/roll.jpeg";
+import axios from "axios";
 
 export default function SearchForm(){
     let[wordTmp, setWordTmp] = useState(null)
     let[word,setWord]=useState(wordTmp)
 
-   
+   function handleResponse(response){
+       console.log(response.data)
+   }
 
+    function search(){
+    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+    axios.get(url).then(handleResponse);
+    }
     function submitWord(event){
         event.preventDefault();
         setWord(wordTmp);
+        search();
         event.target.reset();
     }
     function getWord(event){
-    setWordTmp(event.target.value);
-    
-    
+    setWordTmp(event.target.value);    
     }
+
     return( 
     <div className="searchForm">
         <form onSubmit={submitWord}>
