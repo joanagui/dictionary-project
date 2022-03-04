@@ -1,0 +1,18 @@
+.App-header{
+  text-align: center;
+  margin: 40px;
+}
+
+.App-header h1{
+  font-size: 70px;
+  
+  text-align: center;
+}
+.App-link {
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  display:block;
+}
