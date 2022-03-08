@@ -4,25 +4,25 @@ import roll from "./images/roll.jpeg";
 import axios from "axios";
 
 export default function SearchForm(){
-    let[wordTmp, setWordTmp] = useState(null)
-    let[word,setWord]=useState(wordTmp)
+    let [wordFinal, setWordFinal] = useState("")
+    let [word,setWord] = useState("")
 
    function handleResponse(response){
        console.log(response.data)
    }
 
     function search(){
-    let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
-    axios.get(url).then(handleResponse);
+        let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
+        axios.get(url).then(handleResponse);
     }
     function submitWord(event){
         event.preventDefault();
-        setWord(wordTmp);
+        setWordFinal(word)
         search();
         event.target.reset();
     }
     function getWord(event){
-    setWordTmp(event.target.value);    
+        setWord(event.target.value); 
     }
 
     return( 
@@ -31,7 +31,7 @@ export default function SearchForm(){
             <input type="search" placehorder="Enter a word" onChange={getWord} />
             <input type="submit" value="Search"/>
         </form>
-        <h3 className="text-capitalize">{word}</h3>
+        <h3 className="text-capitalize">{wordFinal}</h3>
         <p className="noun">
             Noun
         </p>
