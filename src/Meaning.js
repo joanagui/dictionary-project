@@ -1,5 +1,6 @@
 import React from "react";
 import "./SearchForm.css";
+import Synonyms from "./Synonyms.js"
 
 export default function Meaning(props){
     console.log(props.meaning)
@@ -8,18 +9,15 @@ export default function Meaning(props){
             <h3>{props.meaning.partOfSpeech}</h3>
             {props.meaning.definitions.map(function(definition, index){
                 return(
-                    <div key={index}>
-                         <br/>
+                    <div key={index} className="details">
                         <p>
                             {definition.definition}
                         </p>
-                        <em>{definition.example}</em>
-                        
+                        <em>Example:{definition.example}</em>
+                        <Synonyms synonyms={definition.synonyms}/>
                         </div>
                 )
             })}
-            <p>{props.meaning.definitions[0].definition}</p>
-            <p>{props.meaning.definitions[0].example}</p>
         </div>
     )
 }
