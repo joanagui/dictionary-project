@@ -26,11 +26,13 @@ export default function SearchForm(){
     }
 
     return( 
-    <div className="searchForm">
-        <form onSubmit={submitWord}>
+    <div >
+        <section>
+        <form onSubmit={submitWord} className="searchForm">
             <input type="search" placehorder="Enter a word" onChange={getWord} />
             <input type="submit" value="Search"/>
         </form>
+        </section>
         <Details data={data}/>
     </div>)
 }

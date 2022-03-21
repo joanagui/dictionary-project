@@ -6,14 +6,13 @@ export default function Meaning(props){
     console.log(props.meaning)
     return (
         <div>
-            <h3>{props.meaning.partOfSpeech}</h3>
             {props.meaning.definitions.map(function(definition, index){
                 return(
-                    <div key={index} className="details">
+                    <div key={index} className="detailsMeaning">
+                        <h3 className="text-capitalize">{props.meaning.partOfSpeech}</h3>
                         <p>
                             {definition.definition}
                         </p>
-                        <em>Example:{definition.example}</em>
                         <Synonyms synonyms={definition.synonyms}/>
                         </div>
                 )

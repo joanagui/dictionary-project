@@ -8,8 +8,9 @@ import Phonetics from "./Phonetics.js"
 export default function Details(props){
     if (props.data){
     return(
-        <div className="details">
-        <h3 className="text-capitalize">{props.data.word}</h3>
+        <div>
+        <h3 className="text-capitalize word">{props.data.word}</h3>
+        
         <Phonetics data={props.data}/>
            {props.data.meanings.map(function(meaning,index){
                return <div key={index}>

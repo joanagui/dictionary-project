@@ -1,22 +1,40 @@
+.detailsMeaning{
+    background-color: white;
+    margin: 30px ;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 3px rgba(158, 152, 152, 0.7)
+    }
+
 .searchForm{
-    text-align: center;
-}
-.searchForm input{
-    margin-right: 10px;
-}
-h3{
-    margin-top: 40px;
-    font-size: 35px;
-    font-weight: 400;
-    margin-bottom: 40px;
-}
-.noun, .adj{
-    font-size: 35px;
     text-align: center;
     
 }
-.nounText, .adjText{
-    text-align: justify;
-    line-height: 20px;
+.detailsPhonetics{
     text-align: center;
+}
+.synonimsLi{ 
+    font-size: 15px;
+    display: inline-block;
+    padding: 10px;
+}
+.searchForm input{
+    margin-right: 10px;
+    color:rgb(97, 97, 102);
+    padding: 5px;
+    border-radius: 5px;; 
+    border: 1px solid rgb(133, 129, 129);
+    
+}
+h3{
+    text-align: left;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.word {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }

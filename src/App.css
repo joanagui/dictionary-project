@@ -1,3 +1,12 @@
+body{
+  background: #f9f8fe;
+  max-width: 900px;
+  margin: 0 auto;
+  
+}
+a{
+  color:rgb(152, 112, 190)
+}
 .App-header{
   text-align: center;
   margin: 40px;
