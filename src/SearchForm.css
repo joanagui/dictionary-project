@@ -1,10 +1,12 @@
-.detailsMeaning{
+.detailsMeaning, .container{
     background-color: white;
     margin: 30px ;
     padding: 15px;
     border-radius: 10px;
     box-shadow: 6px 6px 3px rgba(158, 152, 152, 0.7)
     }
+    
+   
 
 .searchForm{
     text-align: center;
@@ -37,4 +39,8 @@ h3{
     font-size: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
+}
+.example{
+    opacity: 70%;
+    font-style: italic;
 }
